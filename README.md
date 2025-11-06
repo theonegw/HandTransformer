@@ -4,7 +4,7 @@
 ## 🛠️Installation
 ### Prerequires
 + Linux
-+ python
++ python=3.9
 + pytoch
 + CUDA
 
@@ -17,11 +17,12 @@ git clone https://github.com/theonegw/HandTransformer
 
 **Setp2:** 构建conda环境同时激活。
 ```bash
-conda create -n handtransformer python=3.9 -y 
+conda create -n handtransformer python=3.9  
 conda activate handtransformer
 ```
-**Setp3:** 下载pytorch版本
+**Setp3:** 下载 [pytorch](https://pytorch.org/get-started/previous-versions/) 版本
 ```bash
+conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 **Setp4:** 下载环境所需库
 ```bash
