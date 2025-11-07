@@ -151,7 +151,7 @@ def get_dataloaders(
     pad_idx = tokenizer.pad_token_id
     bos_idx = tokenizer.bos_token_id
     eos_idx = tokenizer.eos_token_id
-    vocab_size = tokenizer.vocab_size
+    vocab_size = len(tokenizer) 
     
     collate_fn = CollateFn(
         pad_idx=pad_idx,

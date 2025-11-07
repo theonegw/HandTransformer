@@ -1,3 +1,6 @@
 datasets
 transformers
 matplotlib
+numpy<2.0
+evaluate
+rouge_score

@@ -62,3 +62,29 @@ def count_parameters(model: nn.Module) -> int:
     total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"模型总可训练参数量: {total_params:,}")
     return total_params
+
+def plot_metric_curves(
+    metric_scores: List[float], 
+    metric_name: str, 
+    save_path: str = "results/metric_curves.png"
+) -> None:
+    """
+    绘制一个评价指标 (如 ROUGE) 在
+    每个 epoch 上的变化曲线并保存。
+    
+    Args:
+        metric_scores (List[float]): 每个 epoch 的指标分数列表。
+        metric_name (str): 指标的名称 (例如 "ROUGE-2")。
+        save_path (str): 图像文件的保存路径。
+    """
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    
+    plt.figure(figsize=(10, 6))
+    plt.plot(metric_scores, label=f"{metric_name} Score")
+    plt.xlabel("Epoch")
+    plt.ylabel(f"{metric_name} Score")
+    plt.legend()
+    plt.title(f"Validation {metric_name} Curve")
+    plt.savefig(save_path)
+    plt.close()
+    print(f"{metric_name} 曲线图已保存至: {save_path}")

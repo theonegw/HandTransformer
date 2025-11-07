@@ -156,7 +156,7 @@ def main(args: argparse.Namespace) -> None:
     
     # 1. 加载 Tokenizer
     tokenizer = get_tokenizer()
-    vocab_size = tokenizer.vocab_size
+    vocab_size = len(tokenizer)
 
     # 2. 加载模型架构
     model = Transformer(
