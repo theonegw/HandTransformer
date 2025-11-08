@@ -3,7 +3,7 @@ export CUDA_VISIBLE_DEVICES="7"
 
 python train.py \
     --d_model 128 \
-    --num_heads 8 \
+    --num_heads 16 \
     --num_layers 2 \
     --d_ff 512 \
     --batch_size 32 \

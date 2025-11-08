@@ -3,8 +3,6 @@
 ## Project structure
 ```
 handtransformer
-├── models
-│   └── hand_transformer.pt
 ├── results
 │   ├── training_curve.png
 │   ├── training_loss_curve.png
@@ -45,7 +43,7 @@ handtransformer
 + rouge_score
 
 ### Environment Setup
-克隆环境
+克隆项目
 ```bash
 git clone https://github.com/theonegw/HandTransformer
 ```
@@ -111,7 +109,6 @@ CUDA_VISIBLE_DEVICES=7 python train.py \
 + `model_save_path`：模型保存地址
 
 ## 📺test
-### 准备检查点
 
 ### 测试
 运行测试脚本 `scripts/test.sh`

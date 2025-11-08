@@ -2,7 +2,7 @@
 export CUDA_VISIBLE_DEVICES="7"
 MODEL_PATH="models/hand_transformer.pt"
 
-TEST_SENTENCE="LONDON, England (Reuters) -- Harry Potter star Daniel Radcliffe gains access to a reported £20 million ($41.1 million) fortune as he turns 18 on Monday, but he insists the money won't cast a spell on him. Daniel Radcliffe as Harry Potter in 'Harry Potter and the Order of the Phoenix' To the disappointment of gossip columnists around the world, the young actor says he has no plans to fritter his cash away on fast cars, drink and celebrity parties."
+TEST_SENTENCE="Weather forecasts predict heavy rain and strong winds moving in from the west, expected to arrive by tomorrow morning."
 
 python test.py \
     --sentence "$TEST_SENTENCE" \
